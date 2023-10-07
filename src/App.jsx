@@ -26,6 +26,11 @@ function App() {
       .get(`https://api.jikan.moe/v4/top/anime?page=${state.page}`)
       .then((response) => {
         setTopAnime(response.data);
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        });
       });
   }, [state]);
 
